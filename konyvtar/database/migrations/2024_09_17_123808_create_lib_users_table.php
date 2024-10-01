@@ -16,21 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->tinyInteger('permission')->default(1);
             $table->timestamps();
         });
-
-        LibUser::create([
-            'name'=>'Orsi',
-            'email'=>'orsi@exmaple.com'
-        ]);
-        LibUser::create([
-            'name'=>'Viki',
-            'email'=>'viki@exmaple.com'
-        ]);
-        LibUser::create([
-            'name'=>'Sella',
-            'email'=>'sella@exmaple.com'
-        ]);
     }
 
     /**

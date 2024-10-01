@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Book;
 use App\Models\Copy;
+use App\Models\Lending;
 use App\Models\LibUser;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,8 +18,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         LibUser::factory(10)->create();
-        Book::factory(25)->create();
+        Book::factory(10)->create();
         Copy::factory(10)->create();
+        Lending::factory(10)->create();
         // LibUser::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

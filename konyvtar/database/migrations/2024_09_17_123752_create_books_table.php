@@ -13,28 +13,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id();
+            $table->id('book_id');
             $table->string('author');
             $table->string('title');
-            $table->integer('pieces');
             $table->timestamps();
         });
-
-        Book::create([
-            'author'=>'J. K. Rowling',
-            'title'=>'Harry Potter and The Chamber of Secrets',
-            'pieces'=>6,
-        ]);
-        Book::create([
-            'author'=>'J. K. Rowling',
-            'title'=>'Harry Potter and The Half Blood Prince',
-            'pieces'=>4,
-        ]);
-        Book::create([
-            'author'=>'J. K. Rowling',
-            'title'=>'Harry Potter and The Prisoner of The Azkaban',
-            'pieces'=>5,
-        ]);
     }
 
     /**
