@@ -12,7 +12,8 @@ class Lending extends Model
     protected $fillable = [
         'user_id',
         'book_id',
-        'start'
+        'start',
+        'end',
     ];
 
     protected function setKeysForSaveQuery($query)
